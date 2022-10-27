@@ -14,3 +14,6 @@ RUN adduser -D static
 
 # Retrieving the content of my website from GitHub
 RUN wget https://github.com/RMcCann11/webdev_CA1/archive/main.tar.gz && tar xf main.tar.gz && rm main.tar.gz && mv /webdev_CA1-main /home/static
+
+# Changing working directory to /busybox
+WORKDIR /busybox

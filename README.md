@@ -28,3 +28,7 @@ As per Downloading the BusyBox binaries, the wget command can be used to downloa
 In this case, an archive will be received which can be unarchived using the tar command. As per [geeksforgeeks] (https://www.geeksforgeeks.org/rm-command-linux-examples/), we can use the rm command to delete files, in this case the downloaded archive. As per [geeksforgeeks] (https://www.geeksforgeeks.org/mv-command-linux-examples/#:~:text=mv%20stands%20for%20move.,a%20file%20system%20like%20UNIX.), we can use the mv command to "to move one or more files or directories from one place to another in a file system like UNIX". In this case we are moving an extracted folder i.e. webdev_CA1-main to the '/home/static' directory. This folder contains the content of my website.
 
 ***
+### Changing working directory to /busybox: ###
+As per [java4coding] (https://www.java4coding.com/contents/docker/docker-workdir-command), the docker WORKDIR command can be used to navigate to a working directory.
+
+***
