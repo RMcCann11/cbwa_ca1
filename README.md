@@ -62,3 +62,4 @@ As per Retrieving the content of my website from GitHub, when we used the wget c
 ***
 ### Changing working directory to /home/static/webdev_CA1-main: ###
 As per Changing working directory to /busybox, using the docker WORKDIR command we can navigate to /home/static/webdev_CA1-main as the files to be served by  the BusyBox httpd service are present in this location.
+

@@ -41,3 +41,6 @@ COPY --from=builder /home/static /home/static
 
 ## Changing working directory to /home/static/webdev_CA1-main
 WORKDIR /home/static/webdev_CA1-main
+
+# Copying blank httpd.conf to container
+COPY httpd.conf .
