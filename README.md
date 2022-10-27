@@ -52,3 +52,5 @@ As per [java4coding] (https://www.java4coding.com/contents/docker/docker-volume-
 As previously mentioned, when we added our new user i.e. static to builder their details were added to the '/etc/passwd' file.  We can now use the Docker COPY command to copy this details over to our scratch image as well as copying over a custom version of BusyBox. As per [stackoverflow] (https://stackoverflow.com/questions/66353510/what-is-from-used-in-copy-command-in-dockerfile#:~:text=%22You%20can%20use%20the%20COPY,copies%20the%20artifact%20from%20there.%22), we can use the --from flag to copy from a seperate image, in our case builder. As per [dockerDocumentation] (https://docs.docker.com/engine/reference/builder/#copy), we can set <src> to a previous build stage using the syntax '--from=<name>'.
 
 ***
+### Switching to our non-root user and their working directory: ###
+As per [java4coding] (https://www.java4coding.com/contents/docker/docker-user-command), the docker command USER allows us to switch over to a non-root user as by default containers are launched with root as the user.
