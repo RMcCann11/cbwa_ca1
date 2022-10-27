@@ -35,3 +35,6 @@ COPY --from=builder /busybox/_install/bin/busybox /
 # Switching to our non-root user and their working directory
 USER static
 WORKDIR /home/static
+
+# Copying the content of my website to the scratch image
+COPY --from=builder /home/static /home/static

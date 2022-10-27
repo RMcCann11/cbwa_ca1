@@ -5,7 +5,7 @@ As per [medium] (https://medium.com/swlh/alpine-slim-stretch-buster-jessie-bulls
 
 As per [java4coding] (https://www.java4coding.com/contents/docker/docker-from-command) the docker FROM command can be used to retrieve a base image from Docker Hub that can be utilised by the build process. Furthermore by specifying 'latest' as the releasetag, the latest available build of Alpine will be retrieved.
 
-As per [dockerDocumentation] (https://docs.docker.com/engine/reference/builder/#from) a name can be assigned to this stage of the build process which can be subsequently referenced through the use of AS.
+As per [dockerDocumentation] (https://docs.docker.com/engine/reference/builder/#from) a name can be assigned to this stage of the build process which can be subsequently referenced through the use of AS, in this case builder.
 
 ***
 ### Downloading the BusyBox binaries: ###
@@ -37,7 +37,7 @@ As per [justsomedevnotes] (https://justsomedevnotes.com/2020/11/30/linux-busybox
 
 As per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website), BusyBox consists of many more services than just httpd hence "we can create a custom build of BusyBox limiting it to only httpd and thus reducing its size". This can be achieved using the '.config' file contained within [repo] (https://github.com/lipanski/docker-static-website). As per [educba] (https://www.educba.com/docker-copy-command/), the docker COPY command can be used to copy files or folders from a docker host i.e. a local machine to a container's filesystem. As per [educative] (https://www.educative.io/answers/how-to-use-copy-in-docker), the "syntax of the the COPY command is: COPY <src> <dest>".
 
-As per [thoughtbot] (https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install), we can use the make command in conjunction with the config file and the BusyBox binaries to compile our customised version of Busybox and then use the make install command to "copy the built program, and its libraries and documentation, to the correct location(s)" which in this case as per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website) is '_install/bin/busybox'.
+As per [thoughtbot] (https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install), we can use the make command in conjunction with the config file and the BusyBox binaries to compile our customised version of Busybox and then use the make install command to "copy the built program, and its libraries and documentation, to the correct location(s)" which in this case as per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website) is 'busybox/_install/bin/busybox'.
 
 ***
 ### Switching to the scratch image: ###
@@ -49,8 +49,12 @@ As per [java4coding] (https://www.java4coding.com/contents/docker/docker-volume-
 
 ***
 ### Copying user and custom BusyBox version to the scratch image: ###
-As previously mentioned, when we added our new user i.e. static to builder their details were added to the '/etc/passwd' file.  We can now use the Docker COPY command to copy this details over to our scratch image as well as copying over a custom version of BusyBox. As per [stackoverflow] (https://stackoverflow.com/questions/66353510/what-is-from-used-in-copy-command-in-dockerfile#:~:text=%22You%20can%20use%20the%20COPY,copies%20the%20artifact%20from%20there.%22), we can use the --from flag to copy from a seperate image, in our case builder. As per [dockerDocumentation] (https://docs.docker.com/engine/reference/builder/#copy), we can set <src> to a previous build stage using the syntax '--from=<name>'.
+As per Creating a new user to secure running commands, when we added our new user i.e. static to builder their details were added to the '/etc/passwd' file.  We can now use the Docker COPY command to copy these details over to our scratch image as well as copying over a custom version of BusyBox. As per [stackoverflow] (https://stackoverflow.com/questions/66353510/what-is-from-used-in-copy-command-in-dockerfile#:~:text=%22You%20can%20use%20the%20COPY,copies%20the%20artifact%20from%20there.%22), we can use the --from flag to copy from a seperate image, in our case builder. As per [dockerDocumentation] (https://docs.docker.com/engine/reference/builder/#copy), we can set <src> to a previous build stage using the syntax '--from=<name>'.
 
 ***
 ### Switching to our non-root user and their working directory: ###
 As per [java4coding] (https://www.java4coding.com/contents/docker/docker-user-command), the docker command USER allows us to switch over to a non-root user as by default containers are launched with root as the user.
+
+***
+### Copying the content of my website to the scratch image: ###
+As per Retrieving the content of my website from GitHub, when we used the wget command a folder containinig the content of my website i.e. webdev_CA1-main was placed in the home/static directory of builder. As per Copying user and custom BusyBox version to the scratch image, we can use the docker COPY command to copy this directory to scratch.
