@@ -32,3 +32,9 @@ In this case, an archive will be received which can be unarchived using the tar 
 As per [java4coding] (https://www.java4coding.com/contents/docker/docker-workdir-command), the docker WORKDIR command can be used to navigate to a working directory.
 
 ***
+### Installing a custom version of BusyBox: ###
+As per [justsomedevnotes] (https://justsomedevnotes.com/2020/11/30/linux-busybox-http-server/), the BusyBox httpd service can be used to serve static website content.
+
+As per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website), BusyBox consists of many more services than just httpd hence "we can create a custom build of BusyBox limiting it to only httpd and thus reducing its size". This can be achieved using the '.config' file contained within [repo] (https://github.com/lipanski/docker-static-website). As per [educba] (https://www.educba.com/docker-copy-command/), the docker COPY command can be used to copy files or folders from a docker host i.e. a local machine to a container's filesystem. As per [educative] (https://www.educative.io/answers/how-to-use-copy-in-docker), the "syntax of the the COPY command is: COPY <src> <dest>".
+
+As per [thoughtbot] (https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install), we can use the make command in conjunction with the config file and the BusyBox binaries to compile our customised version of Busybox and then use the make install command to "copy the built program, and its libraries and documentation, to the correct location(s)" which in this case as per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website) is '_install/bin/busybox'.

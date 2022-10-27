@@ -17,3 +17,7 @@ RUN wget https://github.com/RMcCann11/webdev_CA1/archive/main.tar.gz && tar xf m
 
 # Changing working directory to /busybox
 WORKDIR /busybox
+
+# Installing a custom version of BusyBox
+COPY .config .
+RUN make && make install
