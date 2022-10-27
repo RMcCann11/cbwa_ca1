@@ -38,3 +38,6 @@ WORKDIR /home/static
 
 # Copying the content of my website to the scratch image
 COPY --from=builder /home/static /home/static
+
+## Changing working directory to /home/static/webdev_CA1-main
+WORKDIR /home/static/webdev_CA1-main

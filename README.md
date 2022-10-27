@@ -58,3 +58,7 @@ As per [java4coding] (https://www.java4coding.com/contents/docker/docker-user-co
 ***
 ### Copying the content of my website to the scratch image: ###
 As per Retrieving the content of my website from GitHub, when we used the wget command a folder containinig the content of my website i.e. webdev_CA1-main was placed in the home/static directory of builder. As per Copying user and custom BusyBox version to the scratch image, we can use the docker COPY command to copy this directory to scratch.
+
+***
+### Changing working directory to /home/static/webdev_CA1-main: ###
+As per Changing working directory to /busybox, using the docker WORKDIR command we can navigate to /home/static/webdev_CA1-main as the files to be served by  the BusyBox httpd service are present in this location.
