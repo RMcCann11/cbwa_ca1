@@ -38,3 +38,8 @@ As per [justsomedevnotes] (https://justsomedevnotes.com/2020/11/30/linux-busybox
 As per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website), BusyBox consists of many more services than just httpd hence "we can create a custom build of BusyBox limiting it to only httpd and thus reducing its size". This can be achieved using the '.config' file contained within [repo] (https://github.com/lipanski/docker-static-website). As per [educba] (https://www.educba.com/docker-copy-command/), the docker COPY command can be used to copy files or folders from a docker host i.e. a local machine to a container's filesystem. As per [educative] (https://www.educative.io/answers/how-to-use-copy-in-docker), the "syntax of the the COPY command is: COPY <src> <dest>".
 
 As per [thoughtbot] (https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install), we can use the make command in conjunction with the config file and the BusyBox binaries to compile our customised version of Busybox and then use the make install command to "copy the built program, and its libraries and documentation, to the correct location(s)" which in this case as per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website) is '_install/bin/busybox'.
+
+### Switching to the scratch image: ###
+As per [devopsschool] (https://www.devopsschool.com/blog/creating-a-simple-parent-base-docker-image-using-scratch/), "you can use Docker’s reserved, minimal image, scratch, as a starting point for building containers" as this image is in fact completely empty thereby providing you with the smallest base image possible.
+
+***

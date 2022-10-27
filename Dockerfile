@@ -21,3 +21,6 @@ WORKDIR /busybox
 # Installing a custom version of BusyBox
 COPY .config .
 RUN make && make install
+
+# Switching to the scratch image
+FROM scratch
