@@ -68,3 +68,10 @@ As per Changing working directory to /busybox, using the docker WORKDIR command 
 As per [java4coding] (https://www.java4coding.com/contents/docker/docker-cmd-command), the docker CMD command should be used to "define what should happen when you run your image".  Furthermore, this command can be used to utilse a service such as the BusyBox httpd service.
 
 As per [justsomedevnotes] (https://justsomedevnotes.com/2020/11/30/linux-busybox-http-server/), the BusyBox httpd service can be started by issuing the busybox httpd command. Furthermore, the -f flag instructs the service to not daemonise, the -v flag is short for verbose, the -p flag binds to a port i.e. 8080 and the -c flag indicates the configuration file in this case httpd.conf.
+
+***
+### Building an image form a Dockerfile ###
+As per [java4coding] (https://www.java4coding.com/contents/docker/docker-build), the docker build command is used to build a docker image from a Dockerfile which provides instructions on how to do so. Furthermore the full command to build an image is docker build -t <imagename> .
+
+In order to use the Dockerfile contained within this project please navigate to the directory in which you have placed the source code contained in the repo and issue the command docker 'build -t my-static-website .'
+
