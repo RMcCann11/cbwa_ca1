@@ -16,3 +16,8 @@ As per [linuxize] (https://linuxize.com/post/wget-command-examples/), the wget c
 In this case, an archive will be received which as per [linuxize] (https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/), can be unarchived using the tar command. The flag '-x' denotes the extraction option and the name of the archive should follow the 'f' flag. As per [geeksforgeeks] (https://www.geeksforgeeks.org/mv-command-linux-examples/#:~:text=mv%20stands%20for%20move.,a%20file%20system%20like%20UNIX.), we can use the mv command to "to move one or more files or directories from one place to another in a file system like UNIX". In this case we are moving the extracted files to the '/busybox' directory.
 
 As per in [java4coding] (https://www.java4coding.com/contents/docker/docker-run-command), the docker RUN command can be used to execute Linux commands from a terminal.
+
+### Creating a new user to secure running commands: ###
+As per [unix] (https://www.unix.com/man-page/minix/8/adduser/), the adduser command adds a new user to a system by appending a new entrie to '/etc/passwd' and creating a new home directory for our user i.e. '/home/static'. As per [linux] (https://linux.die.net/man/8/adduser), the -D flag denotes to use this default behaviour.
+
+***
