@@ -70,8 +70,13 @@ As per [java4coding] (https://www.java4coding.com/contents/docker/docker-cmd-com
 As per [justsomedevnotes] (https://justsomedevnotes.com/2020/11/30/linux-busybox-http-server/), the BusyBox httpd service can be started by issuing the busybox httpd command. Furthermore, the -f flag instructs the service to not daemonise, the -v flag is short for verbose, the -p flag binds to a port i.e. 8080 and the -c flag indicates the configuration file in this case httpd.conf.
 
 ***
-### Building an image form a Dockerfile ###
+### Building an image from a Dockerfile ###
 As per [java4coding] (https://www.java4coding.com/contents/docker/docker-build), the docker build command is used to build a docker image from a Dockerfile which provides instructions on how to do so. Furthermore the full command to build an image is docker build -t <imagename> .
 
 In order to use the Dockerfile contained within this project please navigate to the directory in which you have placed the source code contained in the repo and issue the command docker 'build -t my-static-website .'
+
+### Running an instance of the image ###
+As per [java4coding] (https://www.java4coding.com/contents/docker/docker-run), the docker run command can be used to run an instance of the image. Furthermore "the docker run command must specify an IMAGE to derive the container from", in this case 'my-static-website'.
+
+In order to run an instance of the image you have created please issue the following command 'docker run -it --rm -p 8080:8080 my-static-website'. Furthermore as per  [dockerDocumentation] (https://docs.docker.com/engine/reference/commandline/run/), the -it flag will keep STDIN open thereby allowing you to interact with the container, the --rm flag will "automatically remove the container when it exits" and the -p 8080:8080 flag will map the container's port 8080 to the local machine's port 8080.
 
