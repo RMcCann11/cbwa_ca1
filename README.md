@@ -43,3 +43,7 @@ As per [thoughtbot] (https://thoughtbot.com/blog/the-magic-behind-configure-make
 As per [devopsschool] (https://www.devopsschool.com/blog/creating-a-simple-parent-base-docker-image-using-scratch/), "you can use Docker’s reserved, minimal image, scratch, as a starting point for building containers" as this image is in fact completely empty thereby providing you with the smallest base image possible.
 
 ***
+### Exposing container port 8080: ###
+As per [java4coding] (https://www.java4coding.com/contents/docker/docker-volume-expose-command#DockerExpose), the docker EXPOSE command is used to expose a container's port to the outside world.
+
+***

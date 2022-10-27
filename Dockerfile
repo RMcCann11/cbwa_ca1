@@ -24,3 +24,6 @@ RUN make && make install
 
 # Switching to the scratch image
 FROM scratch
+
+# Exposing container port
+EXPOSE 8080
