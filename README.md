@@ -17,7 +17,14 @@ In this case, an archive will be received which as per [linuxize] (https://linux
 
 As per in [java4coding] (https://www.java4coding.com/contents/docker/docker-run-command), the docker RUN command can be used to execute Linux commands from a terminal.
 
+***
 ### Creating a new user to secure running commands: ###
 As per [unix] (https://www.unix.com/man-page/minix/8/adduser/), the adduser command adds a new user to a system by appending a new entrie to '/etc/passwd' and creating a new home directory for our user i.e. '/home/static'. As per [linux] (https://linux.die.net/man/8/adduser), the -D flag denotes to use this default behaviour.
+
+***
+### Retrieving the content of my website from GitHub: ###
+As per Downloading the BusyBox binaries, the wget command can be used to download files.
+
+In this case, an archive will be received which can be unarchived using the tar command. As per [geeksforgeeks] (https://www.geeksforgeeks.org/rm-command-linux-examples/), we can use the rm command to delete files, in this case the downloaded archive. As per [geeksforgeeks] (https://www.geeksforgeeks.org/mv-command-linux-examples/#:~:text=mv%20stands%20for%20move.,a%20file%20system%20like%20UNIX.), we can use the mv command to "to move one or more files or directories from one place to another in a file system like UNIX". In this case we are moving an extracted folder i.e. webdev_CA1-main to the '/home/static' directory. This folder contains the content of my website.
 
 ***

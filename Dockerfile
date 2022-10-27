@@ -11,3 +11,6 @@ RUN wget https://busybox.net/downloads/busybox-1.35.0.tar.bz2 \
 
 # Creating a new user to secure running commands
 RUN adduser -D static 
+
+# Retrieving the content of my website from GitHub
+RUN wget https://github.com/RMcCann11/webdev_CA1/archive/main.tar.gz && tar xf main.tar.gz && rm main.tar.gz && mv /webdev_CA1-main /home/static
