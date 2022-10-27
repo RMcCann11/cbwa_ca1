@@ -63,3 +63,8 @@ As per Retrieving the content of my website from GitHub, when we used the wget c
 ### Changing working directory to /home/static/webdev_CA1-main: ###
 As per Changing working directory to /busybox, using the docker WORKDIR command we can navigate to /home/static/webdev_CA1-main as the files to be served by  the BusyBox httpd service are present in this location.
 
+***
+### Issuing commands to run BusyBox: ###
+As per [java4coding] (https://www.java4coding.com/contents/docker/docker-cmd-command), the docker CMD command should be used to "define what should happen when you run your image".  Furthermore, this command can be used to utilse a service such as the BusyBox httpd service.
+
+As per [justsomedevnotes] (https://justsomedevnotes.com/2020/11/30/linux-busybox-http-server/), the BusyBox httpd service can be started by issuing the busybox httpd command. Furthermore, the -f flag instructs the service to not daemonise, the -v flag is short for verbose, the -p flag binds to a port i.e. 8080 and the -c flag indicates the configuration file in this case httpd.conf.

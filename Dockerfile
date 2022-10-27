@@ -44,3 +44,6 @@ WORKDIR /home/static/webdev_CA1-main
 
 # Copying blank httpd.conf to container
 COPY httpd.conf .
+
+# Issuing commands to run BusyBox
+CMD ["/busybox", "httpd", "-f", "-v", "-p", "8080", "-c", "httpd.conf"]
