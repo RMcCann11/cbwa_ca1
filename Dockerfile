@@ -27,3 +27,7 @@ FROM scratch
 
 # Exposing container port
 EXPOSE 8080
+
+# Copying user and custom BusyBox version to the scratch image
+COPY --from=builder /etc/passwd /etc/passwd
+COPY --from=builder /busybox/_install/bin/busybox /

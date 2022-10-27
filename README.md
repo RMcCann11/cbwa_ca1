@@ -39,11 +39,16 @@ As per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website),
 
 As per [thoughtbot] (https://thoughtbot.com/blog/the-magic-behind-configure-make-make-install), we can use the make command in conjunction with the config file and the BusyBox binaries to compile our customised version of Busybox and then use the make install command to "copy the built program, and its libraries and documentation, to the correct location(s)" which in this case as per [blog] (https://lipanski.com/posts/smallest-docker-image-static-website) is '_install/bin/busybox'.
 
+***
 ### Switching to the scratch image: ###
 As per [devopsschool] (https://www.devopsschool.com/blog/creating-a-simple-parent-base-docker-image-using-scratch/), "you can use Docker’s reserved, minimal image, scratch, as a starting point for building containers" as this image is in fact completely empty thereby providing you with the smallest base image possible.
 
 ***
 ### Exposing container port 8080: ###
 As per [java4coding] (https://www.java4coding.com/contents/docker/docker-volume-expose-command#DockerExpose), the docker EXPOSE command is used to expose a container's port to the outside world.
+
+***
+### Copying user and custom BusyBox version to the scratch image: ###
+As previously mentioned, when we added our new user i.e. static to builder their details were added to the '/etc/passwd' file.  We can now use the Docker COPY command to copy this details over to our scratch image as well as copying over a custom version of BusyBox. As per [stackoverflow] (https://stackoverflow.com/questions/66353510/what-is-from-used-in-copy-command-in-dockerfile#:~:text=%22You%20can%20use%20the%20COPY,copies%20the%20artifact%20from%20there.%22), we can use the --from flag to copy from a seperate image, in our case builder. As per [dockerDocumentation] (https://docs.docker.com/engine/reference/builder/#copy), we can set <src> to a previous build stage using the syntax '--from=<name>'.
 
 ***
